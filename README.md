@@ -2,6 +2,9 @@
 
 This extremely simple app displays the very beginning of my learning with Javascript.
 
+Live demo [_here_](https://benschwartz96.github.io/simple-pokedex/).
+
+
 # Features
 
 - A comprehensive list of generation 1 pokemon. 
