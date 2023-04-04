@@ -29,6 +29,8 @@ ul, li {
   }
   
 .pokedex-list-container {
+  display: flex;
+  justify-content: center;
   height: 90%;
   width: 90%;
   margin: 0 auto;
