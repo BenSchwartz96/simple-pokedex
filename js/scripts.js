@@ -1,6 +1,6 @@
 let pokemonRepo = (function() {
     let pokemonList = []
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=1154';
 
 
     //Add new pokemon to the pokemon list
@@ -14,28 +14,58 @@ let pokemonRepo = (function() {
     }
 
     //Creates and adds all the buttons to the DOM
-    function addListItem(pokemon) {     
+
+    // function addListItem(pokemon) {     
       
-        let pokedexList = document.querySelector('.pokedex-list');
-        let listItem = document.createElement('li');
-        let button = document.createElement('button');
+    //     let pokedexList = document.querySelector('.pokedex-list');
+    //     let listItem = document.createElement('li');
+    //     let button = document.createElement('button');
 
-        let pokename = pokemon.name
-        let pokenameStr = ((pokename.charAt(0)).toUpperCase()) + pokename.slice(1);
+    //     let pokename = pokemon.name
+    //     let pokenameStr = ((pokename.charAt(0)).toUpperCase()) + pokename.slice(1);
 
-        button.innerText = pokenameStr;
-        button.classList.add('poke-button', 'btn', 'btn-warning');
+    //     button.innerText = pokenameStr;
+    //     button.classList.add('poke-button', 'btn', 'btn-warning');
 
-        button.setAttribute("data-toggle", "modal");
-        button.setAttribute("data-target", ".modal");
+    //     button.setAttribute("data-toggle", "modal");
+    //     button.setAttribute("data-target", ".modal");
 
-        listItem.appendChild(button);
-        pokedexList.appendChild(listItem);
+    //     listItem.appendChild(button);
+    //     pokedexList.appendChild(listItem);
 
-        button.addEventListener('click', function (event) { 
-            pokemonRepo.showDetails(pokemon);
-        });    
-    }
+    //     button.addEventListener('click', function (event) { 
+    //         pokemonRepo.showDetails(pokemon);
+    //     });    
+    // }
+
+
+    function addListItem(pokemon) {
+      let listItem=document.createElement('div');
+      listItem.classList.add('pokemon-button-wrapper');
+      listItem.classList.add('col');
+      listItem.classList.add('col-lg-3');
+      listItem.classList.add('col-md-4');
+      listItem.classList.add('col-sm-6');
+      
+      let button=document.createElement('button');
+      button.innerText=uppercaseFirst(pokemon.name);
+      button.classList.add('pokemon-button');
+      button.classList.add('btn');
+      button.classList.add('btn-secondary');
+      
+      button.setAttribute('data-toggle', 'modal');
+      button.setAttribute('data-target', '#pokemon-modal')//bootstrap built-in function. Click the button, modal will be shown.
+      pokedexList.appendChild(listItem);
+      listItem.appendChild(button);
+      button.addEventListener('click', ()=>{
+          showDetails(pokemon);
+      });
+  }
+
+
+
+
+
 
     function capitalize(word) {
         let newWord = ((word.charAt(0)).toUpperCase()) + word.slice(1);

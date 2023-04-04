@@ -27,6 +27,20 @@ body {
 }
 
 
+/* temp */
+
+.pokemon-button-wrapper {
+  margin: 5px 0;
+  height:70px;
+  min-width: 240px;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-between;
+  flex: auto;
+}
+
+
 .btn-warning:hover {
     background-color: rgb(218, 77, 218);
 }
