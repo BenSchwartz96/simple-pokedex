@@ -4,6 +4,9 @@ body {
     height: 90vh;
     text-align: left;
     margin: 10px 20px;
+
+    justify-content: center;
+    text-align: center;
 }
 
 ul, li {
@@ -16,8 +19,9 @@ ul, li {
     border: none;
     color: white;
     margin: 3px auto;
-    padding: 15px 32px;
-    width: 80%;       
+    /* padding: 15px 32px; */
+    width: 80%;
+    height: 50%;       
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -27,7 +31,7 @@ ul, li {
 .pokedex-list-container {
   height: 90%;
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   justify-content: center;
 }
 
