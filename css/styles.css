@@ -32,7 +32,7 @@ ul, li {
   justify-content: center;
   height: 90%;
   width: 90%;
-  margin: 0 auto;
+  margin: auto 0 auto 10%;
 }
 
 .pokedex-list {
