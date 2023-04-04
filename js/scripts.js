@@ -16,7 +16,7 @@ let pokemonRepo = (function() {
     //Creates and adds all the buttons to the DOM
     function addListItem(pokemon) {     
       let pokedexList = document.querySelector('.pokedex-list');
-      let listItem = document.createElement('div');
+      let listItem = document.createElement('li');
       let button = document.createElement('button');
 
       let pokename = pokemon.name

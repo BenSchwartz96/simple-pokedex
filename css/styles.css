@@ -6,6 +6,9 @@ body {
     margin: 10px 20px;
 }
 
+ul, li {
+  list-style: none;
+}
 
 .poke-button {
 
@@ -13,13 +16,13 @@ body {
     border: none;
     color: white;
     margin: 3px auto;
+    /* padding: 15px 32px; */
     width: 80%;             
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;                       
   }
-  /* padding: 15px 32px; */
   
 .pokedex-list-container {
   height: 90%;
@@ -32,7 +35,7 @@ body {
     margin-top: 60px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 
